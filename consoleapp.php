@@ -28,7 +28,7 @@ $req_body = json_encode([
 ]);
 // ...or simply $req_body = '{"query": { "match_all": {} }}';
 /* @var $response Response */
-$response = $resp_body = $es_client->post("/_search", ['body' => $req_body]);
+$response = $es_client->post("/_search", ['body' => $req_body]);
 // Print it "as is"
 print $response->getBody();
 // ...or decode (if it is JSON actually) to array (or object) and print
